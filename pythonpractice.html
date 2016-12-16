@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python</title>
+</head>
+
+<style>
+    body {
+        background-color: #96969b;
+
+
+    }
+    table{
+        border-bottom-color: #f8faf7;border-left-color: #f8faf7;border-right-color: #f8faf7;
+        border-top-color: #f8faf7;
+    }
+    header{
+        color: dodgerblue;
+    }
+
+</style>
+
+<body>
+
+
+
+
+
+
+
+<center>
+    <header>JavaScript Calculator</header>
+    <Form name="Calc">
+        <table border=2>
+            <tr>
+                <td>
+                    <center>
+                        <input type="text"   name="Input" Size="16">
+                    </center>
+                    <br>
+                </td>
+
+            <tr>
+                <td><input style="background-color: #6375ab" type="button" name="one" value="  1  " OnClick="Calc.Input.value += '1'">
+                    <input style="background-color: #6375ab" type="button" name="two" value="  2  " OnCLick="Calc.Input.value += '2'">
+                    <input style="background-color: #6375ab" type="button" name="three" value="  3  " OnClick="Calc.Input.value += '3'">
+                    <input style="background-color: #a4fff3" type="button" name="plus" value="  +  " OnClick="Calc.Input.value += ' + '">
+                    <br>
+                    <input style="background-color: #6375ab" type="button" name="four" value="  4  " OnClick="Calc.Input.value += '4'">
+                    <input style="background-color: #6375ab" type="button" name="five" value="  5  " OnCLick="Calc.Input.value += '5'">
+                    <input style="background-color: #6375ab" type="button" name="six" value="  6  " OnClick="Calc.Input.value += '6'">
+                    <input style="background-color: #a4fff3" type="button" name="minus" value="  -  " OnClick="Calc.Input.value += ' - '">
+                    <br>
+                    <input style="background-color: #6375ab" type="button" name="seven" VALUE="  7  " OnClick="Calc.Input.value += '7'">
+                    <input style="background-color: #6375ab" type="button" name="eight" value="  8  " OnCLick="Calc.Input.value += '8'">
+                    <input style="background-color: #6375ab" type="button" name="nine" value="  9  " OnClick="Calc.Input.value += '9'">
+                    <input style="background-color: #a4fff3" type="button" name="times" value="  x  " OnClick="Calc.Input.value += ' * '">
+                    <br>
+                    <input type="button" name="clear" value="  c  " OnClick="Calc.Input.value = ''">
+                    <input type="button" name="zero"  value="  0  " OnClick="Calc.Input.value += '0'">
+                    <input type="button" name="DoIt"  value="  =  " OnClick="Calc.Input.value = eval(Calc.Input.value)">
+                    <input type="button" name="div"   value="  /  " OnClick="Calc.Input.value += ' / '">
+                    <br>
+                </td>
+            </tr>
+        </TABLE>
+    </FORM>
+</center>
+
+
+
+<script hidden>
+
+    function randomNumber(max,min){
+
+        return Math.random() * (max - min + 1) + min;
+
+    }
+
+
+    function addition(n1, n2){
+        return n1 + n2;}
+
+    function multiplication(n1, n2) {
+        return n1 * n2;
+    }
+
+    function subtraction(n1, n2){
+        return n1 - n2;
+    }
+
+
+    function division(n1, n2){
+        return n1 / n2;
+    }
+
+
+
+    function modulus(n1, n2) {
+        return n1 % n2;
+    }
+    
+
+    num1 = randomNumber(100,0);
+
+    num2 = randomNumber(100,0);
+
+    sm = addition(num1, num2);
+
+    prod = multiplication(num1, num2);
+
+    dif = subtraction(num1, num2);
+
+    quotient = division(num1, num2);
+
+    mod = modulus(num1, num2);
+
+    document.write("Value A:\t" + (num1) + "<br>");
+
+    document.write("Value B:\t" + (num2) + "<br>");
+
+    document.write("The sum of the two numbers is: " + (sm));
+
+    document.write("The pr
